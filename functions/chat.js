@@ -1,4 +1,5 @@
 import { ChatGPTAPIBrowser } from "chatgpt";
+import puppeteer from "puppeteer";
 import env from "dotenv"
 env.config();
 
