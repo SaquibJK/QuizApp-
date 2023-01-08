@@ -1,0 +1,31 @@
+<%- include('./partials/header') %>
+
+    <div class="container mt-5 quiz">
+        <h5 class="lead my-4">
+            <%= quiz.title %>
+        </h5>
+    
+        <form class="form-group row" action="/quiz/<%= href %>" method="post">
+            <div class="col-12">
+                <h2 class="gr my-3">
+                    <%= quiz.text %>
+                </h2>
+            </div>
+    
+            <% for (var key in quiz.options[0]) { %>
+                <div class="form-check col-md-12">
+                    <input class="form-check-input my-2 mx-2" type="radio" name="radio" value="<%= quiz.options[0][key]['val'] %>">
+                    <label class="form-check-label fs-5">
+                        <%= quiz.options[0][key]['val'] %>
+                    </label>
+                </div>
+                <% } %>
+                    <div class="mx-sm-3 mb-2 text-center">
+                        <button type="submit" class="button mt-3">
+                            <%= text %>
+                        </button>
+                    </div>
+        </form>
+    </div>
+
+<%- include('./partials/footer') %>

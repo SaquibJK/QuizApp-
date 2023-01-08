@@ -1,0 +1,31 @@
+<%- include('./partials/header') %>
+
+<div class="container">
+    <div class="container-fluid">
+        <h1 class="text-center mt-5 header-text">Still Confused About <span class="gr">Which Programing Language to Learn 🤔🤦‍♂️?</span></h1>
+        <p class="text-center mb-5 subheader-text mt-3"><b style="font-weight:500">Worry Not !</b> After Taking this Quiz you will be Crystal Clear About Relevant Programming Languages
+    </div>
+    </p>
+    <div class="container d-flex justify-content-center">
+        <form action="/" method="post" class="form-inline">
+            <div class="form-group mx-sm-3 mb-2 col-md-12">
+                <input type="email" name="email" placeholder="Enter your email for Quiz" class="form-control">
+            </div>
+            <div class="mx-sm-3 mb-2 text-center">
+            <button class="button fst-normal" role="button">Let's found out</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <% if(locals.msg) {%>
+        <div class="container d-flex justify-content-center">
+            <div class="mx-sm-3 mb-2">
+            <h4 class="warn lead text-center mt-2 rounded">
+                <%= msg %>
+            </h4>
+            </div>
+        </div>
+    <% } %>
+
+<%- include('./partials/footer') %>

@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100;
+}
+
+body {
+  background-color: #808080;
+}
+
+.warn {
+  background: rgba(255, 140, 140,.5);
+  color: white;
+  width: 200px;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.container text {
+  width: 200px;
+}
+
+.header-text {
+  margin: 0 auto;
+  font-size: 3rem;
+  max-width: 700px;
+  font-weight: 400;
+  font-family: "Rubik", "Barlow", Arial, Helvetica, sans-serif;
+}
+
+.subheader-text {
+  margin: 0 auto;
+  font-size: 1.7rem;
+  max-width: 600px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.gr {
+  color: #39ff14;
+}
+
+.wt{
+  color:white;
+}
+
+.background{
+  background: black;
+  border-radius:1.2rem;
+  padding:2rem 1rem;
+}
+
+.text{
+  font-size:1.5rem;
+  font-weight:400
+}
+
+.headerO{
+  font-family: "Rubik", "Barlow", Arial, Helvetica, sans-serif;
+  font-weight:500;
+}
+
+
+/* button */
+
+.button {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+  rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+  rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+  rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: rgb(31, 33, 31);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+  rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+  rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+  rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+@media screen and (max-width: 780px) {
+  .header-text {
+    font-size: 2.2rem;
+  }
+  .subheader-text {
+    font-size: 1.4rem;
+  }
+  .background{
+    padding:1rem 0.5rem;
+  }
+  .text{
+    font-size:1.2rem;
+  }
+  .headerO{
+    font-weight:400;
+  }
+}
+
+.wrapper{
+  position:fixed;
+  display:absolute;
+  right:0;
+  bottom:1;
+}
+
+.Text{
+  font-size: 1.3rem;
+  background:red;
+  max-width:230px;
+  margin:0 auto;
+  padding:15px 6px;
+  border-radius:9px;
+  margin-right:12px;
+}

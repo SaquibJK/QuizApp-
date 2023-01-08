@@ -1,0 +1,13 @@
+<%- include('./partials/header') %>
+
+<div class="container d.flex mt-5">
+    <h3 class="headerO text-center fs-3"><%= headerText %></h3>
+    <div class="container background">
+        <h5 class="text p-2">
+            <pre style="white-space: pre-wrap; word-break: keep-all;"><%= locals.result || 'Something Went Wrong' %>
+            </pre>
+            </h5>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>
