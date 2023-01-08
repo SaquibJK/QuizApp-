@@ -2,6 +2,11 @@ import { ChatGPTAPIBrowser } from "chatgpt";
 import env from "dotenv"
 env.config();
 
+const browser = await puppeteer.launch({
+  headless: true,
+  args: ["--no-sandbox", "--disable-setuid-sandbox"],
+});
+
 const api = new ChatGPTAPIBrowser({
   email: process.env.OPENAI_EMAIL,
   password: process.env.OPENAI_PASSWORD,
