@@ -1,15 +1,13 @@
 import { ChatGPTAPIBrowser } from "chatgpt";
 import puppeteer from "puppeteer";
-import env from "dotenv"
+import env from "dotenv";
 env.config();
 
 const browser = await puppeteer.launch({
   headless: true,
   args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  executablePath: "/usr/bin/chromium-browser",
+  executablePath: "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
 });
-
-
 
 const api = new ChatGPTAPIBrowser({
   email: process.env.OPENAI_EMAIL,
