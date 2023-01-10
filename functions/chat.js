@@ -6,7 +6,10 @@ env.config();
 const browser = await puppeteer.launch({
   headless: true,
   args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  executablePath: "/usr/bin/chromium-browser",
 });
+
+
 
 const api = new ChatGPTAPIBrowser({
   email: process.env.OPENAI_EMAIL,
