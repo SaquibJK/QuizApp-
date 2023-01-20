@@ -38,4 +38,4 @@ let quiz3 = {
 };
 
 
-  export {quiz1, quiz2, quiz3 }
+  module.exports =  {quiz1, quiz2, quiz3 }

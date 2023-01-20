@@ -1,25 +1,20 @@
-import { ChatGPTAPIBrowser } from "chatgpt";
-import puppeteer from "puppeteer";
-import env from "dotenv";
-env.config();
-
-const browser = await puppeteer.launch({
-  headless: true,
-  args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  executablePath: "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
-});
-
-const api = new ChatGPTAPIBrowser({
-  email: process.env.OPENAI_EMAIL,
-  password: process.env.OPENAI_PASSWORD,
-  session: process.env.SESSION_TOKEN,
-});
-
-await api.initSession();
+require("dotenv").config()
 
 async function Ans(prompt) {
-  let result = await api.sendMessage(prompt);
-  return result.response;
+
+  let sdk = require('api')('@writesonic/v2.2#43xnsflcadmm1b');
+    try {
+      sdk.auth(`${process.env.API_KEY}`);
+      let response = sdk.ansMyQues_V2BusinessContentAnsMyQues_post({ question: `${prompt}` }, { engine: 'good', num_copies: '1' })
+        // .then(({ data }) => {
+        //   return data
+        // });
+      return response;
+    } catch (error) {
+        (error => console.error(error));
+    }
+  
+
 }
 
-export default Ans;
+module.exports = Ans

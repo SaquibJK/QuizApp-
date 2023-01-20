@@ -3,4 +3,4 @@ function result(a, b, c,) {
    return prompt;
 }
 
-export default result
+module.exports = result;

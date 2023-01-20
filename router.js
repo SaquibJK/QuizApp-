@@ -1,16 +1,16 @@
-import express from "express";
-import env from "dotenv";
+const express = require("express");
+const env = require("dotenv")
 env.config();
 var router = express.Router();
-import { quiz1, quiz2, quiz3 } from "./quiz.js";
-import result from "./functions/result.js";
+const  { quiz1, quiz2, quiz3 }= require("./quiz.js");
+const result = require("./functions/result.js");
 let a,b,c = "";
 let choices = [];
-import Ans from "./functions/chat.js"
-import { Email } from "./server.js";
+const Ans = require("./functions/chat.js")
+const  Email  = require("./server.js");
 
-import mongoose from "mongoose";
-import User from "./model/user.js";
+const mongoose = require("mongoose");
+const User = require("./model/user.js");
 mongoose.set("strictQuery", true);
 mongoose.connect(process.env.MONGO_URI, (err) => {
   if (err) {
@@ -59,16 +59,16 @@ router.post("/page3", async (req, res) => {
       choices.push(c);
     }
     let prompt = result(a, b, c);
-    let answer = await Ans(prompt)
+    let answer = await Ans(prompt);
     const newUser = new User({
-      email: Email,
+      email: toString(Email),
       choices: choices,
       prompt: prompt,
     });
 
     newUser.save((err) => {
       if (!err) {
-        res.render("output", { result: answer, headerText: a });
+        res.render("output", { result: answer.data[0].text, headerText: a });
       } else {
         console.log(err);
       }
@@ -78,4 +78,4 @@ router.post("/page3", async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
